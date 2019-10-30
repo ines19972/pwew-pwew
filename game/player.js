@@ -35,6 +35,7 @@ Player.prototype.accelerate = function (distance) {
 };
 
 Player.prototype.dead = function () {
+    this.life -= 1;
     this.graphic.position.z = this.graphic.position.z-0.1;
         //Nettoyage de la div container
         $("#container").html("");
@@ -82,5 +83,4 @@ Player.prototype.move = function () {
 
     light1.position.x = this.graphic.position.x;
     light1.position.y = this.graphic.position.y;
-    //light1.position.z = this.graphic.position.z + 500;
 };
